@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :root {
     --main-bg-color: hsl(0, 0%, 98%);
     --accent-color: color-mix(in srgb, orange 70%, red 30%);
