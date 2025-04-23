@@ -19,7 +19,9 @@
 }
 
 p{
-
+    margin-top: 0.5rem;
+    color: color(srgb 0.2 0.2 0.2);
+    text-align: left;
 }
 
 @media (max-width: 768px) {
