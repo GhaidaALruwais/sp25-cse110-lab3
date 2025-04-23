@@ -26,8 +26,17 @@ p{
 
 }
 
-button:hover{
+button:hover {
+    background-color: var(--btn-hover-color);
+    color: white;
+    cursor: pointer;
+    transform: scale(1.05);
+}
 
+section:has(img) {
+    border: 2px solid #ffcc00;
+    padding: 1rem;
+    background-color: #fffff0;
 }
 
 .list{
