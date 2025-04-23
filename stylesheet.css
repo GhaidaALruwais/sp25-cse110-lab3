@@ -121,3 +121,7 @@ main {
     max-width: 1200px;
     min-width: 320px;
 }
+
+.list{
+    display: block;
+}
