@@ -18,10 +18,22 @@
     color: var(--text-color, --fallback-color);
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    padding: var(--spacing-unit);
+}
+
 p{
     margin-top: 0.5rem;
     color: color(srgb 0.2 0.2 0.2);
     text-align: left;
+}
+
+h1, h2, h3{
+    color: var(--accent-color);
+    text-decoration: underline;
+    margin-bottom: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -54,7 +66,12 @@ p{
 }
 
 #tools{
-
+    font-weight: bold;
+    padding: 0.5rem;
+    border: 1px solid orange;
+    background-color: var(--highlight-color);
+    border-radius: 8px;
+    margin: 1rem 0;
 }
 
 button:hover {
@@ -71,32 +88,41 @@ section:has(img) {
 }
 
 .list{
-
-}
-
-h1, h2, h3{
-
+    padding: 5px 10px;
+    border-left: 3px solid var(--accent-color);
+    margin-bottom: 0.5rem;
+    display: block;
 }
 
 summary > p{
-    
+    font-style: italic;
+    color: darkgray;
 }
 
 fieldset:has(textarea){
-
+    border-color: #ff7f50;
+    background-color: #fff8f0;
 }
 
 form{
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 
     fieldset{
+        border: 2px dashed #ccc;
+        padding: 1.5rem;
 
         label{
+            font-size: 0.95rem;
+            color: #222;
 
         }
 
         input{
+            padding: 0.5rem;
+            border: 1px solid #aaa;
+            border-radius: 5px;
 
         }
 
@@ -104,11 +130,17 @@ form{
 }
 
 input[name="Language"]{
-
+    border: 2px solid #888;
+    padding: 0.5rem;
 }
 
 header{
     position: sticky;
+    top: 0;
+    background-color: white;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    z-index: 1000;
 }
 
 main {
@@ -126,4 +158,41 @@ main {
 
 .list{
     display: block;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f1f1f1;
+    border-top: 1px solid #ccc;
+}
+nav {
+    display: none;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    main {
+      padding: 1.5rem;
+    }
+  
+    form fieldset {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    section {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    footer {
+      flex-direction: row;
+      justify-content: space-around;
+    }
 }
